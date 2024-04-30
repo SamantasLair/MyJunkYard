@@ -1,11 +1,9 @@
 from manim import *
-
-
 class MyAnimation(Scene):
     def construct(self):
         plane = NumberPlane()
         self.add(plane)
-        self.wait(1)
+        
         circle = Circle()
 
         self.play(Create(circle))
