@@ -17,5 +17,5 @@ class MyAnimation(Scene):
             self.play(ApplyMethod(circle.move_to, np.array([x-2, x, 0])))
             self.play(ApplyMethod(circle.move_to, np.array([x+1, x, 0])))
 
-# To run the animation, add the following line:
+Plane().render()
 MyAnimation().render()
