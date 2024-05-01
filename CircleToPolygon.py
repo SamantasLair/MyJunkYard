@@ -1,0 +1,20 @@
+from turtle import left
+from manim import *
+
+class MyAnimation(Scene):
+    def construct(self):
+        circle = Circle()
+        dot = np.array([1,2,0])
+        dot2 = np.array([-1,2,0])
+        dot3 = np.array([-1,-2,0])
+        dot4 = np.array([1,-2,0])
+        dot5 = np.array([3,0,0])
+        dot6 = np.array([4,0,0])
+        polygon = Polygon(dot, dot2, dot3, dot4,dot5, dot6, fill_color=BLUE, fill_opacity=1)
+
+        self.play(Create(polygon))
+        self.play(Transform(polygon, circle))
+        self.play(FadeOut(circle))
+
+# To run the animation, add the following line:
+MyAnimation().construct()
