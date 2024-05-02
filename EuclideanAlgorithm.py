@@ -1,5 +1,5 @@
 from manim import *
-
+#The main idea (a,b) if(a>b) a = b * n + r 
 
 class EuclidianAlgorithm(Scene):
   def construct(self):
@@ -7,6 +7,7 @@ class EuclidianAlgorithm(Scene):
     n1 = 122
     r1 = m1 % n1
     a1 = m1//n1
+    
     # Create initial Text objects
     mt = Text(str(m1), color=BLUE)
     nt = Text(str(n1), color=RED)
@@ -15,6 +16,7 @@ class EuclidianAlgorithm(Scene):
     equal = Text(" = ")
     times = Text(" * ")
     plus = Text(" + ")
+    
     # Combine initial Text objects into a VGroup
     full = VGroup(mt, equal, nt, times, at,plus,rt).arrange(buff=0.5)
 
@@ -37,6 +39,7 @@ class EuclidianAlgorithm(Scene):
       nte = Text(str(n), color=RED)
       rte = Text(str(r), color=GREEN)
       ate = Text(str(a), color=YELLOW)
+      
       # Combine the new Text objects into a VGroup with the same arrangement
       new_full = VGroup(mte, equal, nte, times, ate,plus,rte).arrange(buff=0.5)
 
