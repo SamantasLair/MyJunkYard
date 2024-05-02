@@ -1,4 +1,3 @@
-from turtle import left
 from manim import *
 
 class MyAnimation(Scene):
@@ -14,7 +13,6 @@ class MyAnimation(Scene):
 
         self.play(Create(polygon))
         self.play(Transform(polygon, circle))
-        self.play(FadeOut(circle))
+        self.wait(2)
 
-# To run the animation, add the following line:
 MyAnimation().construct()
