@@ -3,12 +3,9 @@ from manim import *
 
 class MyAnimation(Scene):
     def construct(self):
-        circle = Circle()
-        square = Square()
+        circle = Circle().shift(DOWN*2)
+        square = Square().to_corner(UL)
 
         self.play(Create(square))
         self.play(Transform(square, circle))
-        self.play(FadeOut(circle))
-
-# To run the animation, add the following line:
-MyAnimation().construct()
+        self.wait(5)
